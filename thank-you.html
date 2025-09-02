@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Background video */
+    .video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Centered content */
+    .thankyou-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .thankyou-content h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .thankyou-content p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    /* Button with your colors */
+    .thankyou-content button {
+      color: white;
+      padding: 15px 35px;
+      border-radius: 10px;
+      border: 1px solid #72a1de81;
+      background-color: #2200493d;
+      box-shadow: 0 0 5px #72a1de81;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1em;
+    }
+
+    .thankyou-content button:hover {
+      opacity: 0.8;
+      box-shadow: 0 0 15px #72a1de81;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background video -->
+  <video autoplay muted loop class="video-bg">
+    <source src="videos/galaxy.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content -->
+  <div class="thankyou-content">
+    <h1>Thank You!</h1>
+    <p>Your message has been received. I’ll get back to you soon.</p>
+    <button onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+</body>
+</html>
