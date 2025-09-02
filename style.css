@@ -1041,25 +1041,42 @@ header ul a:hover{
     filter: grayscale(0);
 }
 
-
 /* CONTACT SECTION */
-
 .contact-section {
   width: 80%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  gap: 10%;
+  flex-direction: column; /* heading + paragraph stacked above flex row */
   align-items: center;
-  position: relative;
+  padding: 50px 0;
+  gap: 30px; /* spacing between heading, paragraph, and row */
+  box-sizing: border-box;
 }
 
 .contact-section h1 {
-  position: absolute;
-  top: 10%;
-  left: 40%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
+.intro-text {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* Flex row for social + form */
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10%; /* same spacing as original */
+  width: 100%;
+  flex-wrap: wrap; /* responsive */
+}
+
+/* Left Social Box */
 .social-box {
   display: flex;
   flex-direction: column;
@@ -1070,7 +1087,7 @@ header ul a:hover{
   color: lightgray;
   text-decoration: none;
   font-size: 20px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .social-box i {
@@ -1084,10 +1101,17 @@ header ul a:hover{
   margin-top: 40px;
 }
 
+/* ==== Right Form Design (original styles) ==== */
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
 .contact-box p {
   max-width: 400px;
-  margin-top: 30px;
-  margin-bottom: 5px;
+  /* margin: 0 0 10px 0;  */
+  font-weight: 500;   /* optional for label visibility */
 }
 
 .contact-box input,
@@ -1104,17 +1128,19 @@ header ul a:hover{
 
 .contact-box input {
   height: 25px;
+  width: 100%;
 }
 
 .contact-box textarea {
   height: 100px;
+  width: 100%;
   resize: none;
 }
 
 .contact-box button {
   margin-top: 30px;
   color: white;
-  padding: 15px 35px;
+  padding: 15px 20px;
   border-radius: 10px;
   border: 1px solid #72a1de81;
   background-color: #2200493d;
@@ -1126,6 +1152,19 @@ header ul a:hover{
 .contact-box button:hover {
   opacity: 0.8;
   box-shadow: 0 0 15px #72a1de81;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    width: 100%;
+  }
 }
 
 .footer{
