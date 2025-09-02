@@ -1041,6 +1041,7 @@ header ul a:hover{
     filter: grayscale(0);
 }
 
+
 /* CONTACT SECTION */
 .contact-section {
   width: 80%;
@@ -1048,22 +1049,18 @@ header ul a:hover{
   display: flex;
   flex-direction: column; /* heading + paragraph stacked above flex row */
   align-items: center;
+  justify-content: center; /* vertically center content */
   padding: 50px 0;
   gap: 30px; /* spacing between heading, paragraph, and row */
   box-sizing: border-box;
 }
 
 .contact-section h1 {
-
   text-align: center;
-  margin-bottom: 10px;
-
-  position: absolute;
-  top: 50%;
-  left: 40%;
-
-
+  position: relative; /* normal flow */
+  margin: 0; /* remove default margin if needed */
 }
+
 
 .intro-text {
   text-align: center;
