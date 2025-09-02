@@ -52,7 +52,7 @@ function initChatbot() {
     } else if (msg.includes("projects")) {
       return "I’ve worked on portfolio websites, apps, and AI projects 🚀.";
     } else if (msg.includes("contact")) {
-      return "You can reach me at: yourname@email.com 📩";
+      return "You can reach me at: hifzaofpk@email.com 📩";
     } else {
       return "I’m still learning! Try asking about my skills, projects, or contact.";
     }
