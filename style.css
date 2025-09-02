@@ -1054,15 +1054,15 @@ header ul a:hover{
 }
 
 .contact-section h1 {
-<<<<<<< HEAD
+
   text-align: center;
   margin-bottom: 10px;
-=======
+
   position: absolute;
   top: 50%;
   left: 40%;
- 
->>>>>>> 26bf5f3f96315dde51294b09721e272ced2a7091
+
+
 }
 
 .intro-text {
@@ -1117,13 +1117,13 @@ header ul a:hover{
 
 .contact-box p {
   max-width: 400px;
-<<<<<<< HEAD
+
   /* margin: 0 0 10px 0;  */
   font-weight: 500;   /* optional for label visibility */
-=======
+
   margin-top: 50px;
   margin-bottom: 10px;
->>>>>>> 26bf5f3f96315dde51294b09721e272ced2a7091
+
 }
 
 .contact-box input,
