@@ -1,19 +1,20 @@
-const videoCards = document.querySelectorAll(".project-card");
+const projectCards = document.querySelectorAll(".project-card");
 
-videoCards.forEach((card) => {
+projectCards.forEach(card => {
   const video = card.querySelector("video");
   const hoverSign = card.querySelector(".hover-sign");
 
   card.addEventListener("mouseover", () => {
-    video.play();
-    hoverSign.classList.add("active");
+    video.play().catch(e => console.log("Video play error:", e));
+    hoverSign.style.display = "none"; // hide 👆 sign on hover
   });
 
   card.addEventListener("mouseout", () => {
     video.pause();
-    hoverSign.classList.remove("active");
+    hoverSign.style.display = "block"; // show 👆 sign again
   });
 });
+
 
 // Sidebar elements //
 menu.addEventListener("click", function () {
