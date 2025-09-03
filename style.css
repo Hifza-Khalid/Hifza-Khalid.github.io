@@ -377,34 +377,26 @@ header ul a:hover{
 
 
 
-
-/* Projects Section */
+/* Project section improvements */
 .my-project {
     display: flex;
     flex-direction: column;
-    gap: 10%;
     align-items: center;
-    position: relative;
     width: 80%;
-    margin: 200px auto 700px auto;
-}
-
-.section-title {
-    font-size: 36px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
+    margin: 100px 0;
 }
 
 .project-card {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 10%;
+    gap: 50px;
     justify-content: center;
-    flex-wrap: wrap; /* helps responsive design */
+    margin-bottom: 150px;
+}
+
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .project-vidbox {
@@ -412,37 +404,26 @@ header ul a:hover{
     align-items: center;
     justify-content: center;
     width: 50%;
+    mix-blend-mode: exclusion;
     position: relative;
     cursor: pointer;
+    transition: all 0.5s ease;
     min-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .project-vidbox video {
     object-fit: cover;
     width: 100%;
-    height: auto;
+    box-shadow: 0 0 20px rgba(211, 211, 211, 0.3);
     border-radius: 20px;
-    box-shadow: 0 0 10px lightgray;
-    transition: 0.5s;
+    transition: all 0.5s ease;
 }
 
-.project-vidbox video:hover {
-    box-shadow: 0 0 25px rgb(255, 255, 255);
-}
-
-.hover-sign {
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    font-size: 50px;
-    pointer-events: none;
-    animation: hover-animation 2s ease-in-out infinite;
-    color: white;
-}
-
-@keyframes hover-animation {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+.project-vidbox:hover video {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    transform: scale(1.03);
 }
 
 .project-info {
@@ -451,59 +432,72 @@ header ul a:hover{
     align-items: flex-start;
     justify-content: center;
     width: 50%;
-    padding-left: 10%;
-    min-width: 300px;
 }
 
 .project-info h1 {
-    width: 90%;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-    max-width: 450px;
-}
-
-.project-info h1 .gradient {
-    background: linear-gradient(90deg, #72a1de, #220049);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
 }
 
 .project-info p {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 0 50px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+    color: rgba(211, 211, 211, 0.8);
 }
 
 .project-info button {
     color: white;
-    padding: 15px 35px;
-    border-radius: 10px;
+    padding: 12px 30px;
+    border-radius: 50px;
     border: 1px solid #72a1de81;
     background-color: #2200493d;
     box-shadow: 0 0 5px #72a1de81;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
 }
 
 .project-info button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     box-shadow: 0 0 15px #72a1de81;
+    transform: translateY(-3px);
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1000px) {
-    .project-card {
-        flex-direction: column;
-    }
-    .project-vidbox,
-    .project-info {
-        width: 90%;
-        padding-left: 0;
-    }
+.project-vidbox .hover-sign {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100px;
 }
 
+.hover-sign::before {
+    content: "👆 Hover to play";
+    position: absolute;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 15px;
+    border-radius: 30px;
+    animation: hover-pulse 2s infinite;
+}
 
+@keyframes hover-pulse {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
 
 
 /* Skills section */
