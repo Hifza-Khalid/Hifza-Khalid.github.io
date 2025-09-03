@@ -1,20 +1,21 @@
-const projectCards = document.querySelectorAll(".project-card");
+// Project video hover play
+const video1 = document.getElementById("projectVideo1");
+const video2 = document.getElementById("projectVideo2");
+const video3 = document.getElementById("projectVideo3");
 
-projectCards.forEach(card => {
-  const video = card.querySelector("video");
-  const hoverSign = card.querySelector(".hover-sign");
+const videoList = [video1, video2, video3];
 
-  card.addEventListener("mouseover", () => {
-    video.play().catch(e => console.log("Video play error:", e));
-    hoverSign.style.display = "none"; // hide 👆 sign on hover
-  });
+videoList.forEach(function (video) {
+  if (video) {
+    video.addEventListener("mouseover", function () {
+      this.play();
+    });
 
-  card.addEventListener("mouseout", () => {
-    video.pause();
-    hoverSign.style.display = "block"; // show 👆 sign again
-  });
+    video.addEventListener("mouseout", function () {
+      this.pause();
+    });
+  }
 });
-
 
 // Sidebar elements //
 menu.addEventListener("click", function () {
