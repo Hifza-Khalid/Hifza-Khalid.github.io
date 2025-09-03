@@ -1,22 +1,15 @@
-const video1 = document.getElementById("projectVideo1");
-const video2 = document.getElementById("projectVideo2");
-const video3 = document.getElementById("projectVideo3");
+const videoCards = document.querySelectorAll(".project-card");
 
-// Sidebar elements //
-const sideBar = document.querySelector(".sidebar");
-const menu = document.querySelector(".menu-icon");
-const closeIcon = document.querySelector(".close-icon");
+videoCards.forEach((card) => {
+  const video = card.querySelector("video");
+  const hoverSign = card.querySelector(".hover-sign");
 
-const hoverSign = document.querySelector(".hover-sign");
-
-const videoList = [video1, video2, video3];
-
-videoList.forEach(function (video) {
-  video.addEventListener("mouseover", function () {
+  card.addEventListener("mouseover", () => {
     video.play();
     hoverSign.classList.add("active");
   });
-  video.addEventListener("mouseout", function () {
+
+  card.addEventListener("mouseout", () => {
     video.pause();
     hoverSign.classList.remove("active");
   });
